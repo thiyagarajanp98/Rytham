@@ -17,7 +17,7 @@ const Sidebar = () => {
     <div className="side-bar text-white w-52 p-4 h-screen hidden sm:flex flex-col justify-between bg-[#18181d] z-index[10000]">
       <div className="flex items-center gap-1.5 pb-4">
         <button
-          className="menu-btn"
+          className="menu-btn items-center justify-center bg-[#1d1d1d] border text-xl cursor-pointer p-1 rounded-lg border-solid border-[#464748]"
           id="menu-close"
           onClick={() => handelclick()}
         >
