@@ -1,10 +1,46 @@
 const Maincontainer = () => {
-  console.log(document.querySelector("menu-close"));
+  const handelclick = () => {
+    const sidebar = document.querySelector("div.hidden");
+    if (sidebar?.classList.contains("sm:hidden")) {
+      sidebar?.classList.replace("sm:hidden", "sm:flex");
+      document
+        .querySelector("div header button.menu-btn")
+        ?.classList.replace("sm:flex", "sm:hidden");
+    } else {
+      sidebar?.classList.replace("hidden", "flex");
+      document
+        .querySelector("div header button.menu-btn")
+        ?.classList.replace("flex", "hidden");
+    }
+  };
+  const searchClick = () => {
+    const input = document.querySelector("header input");
+    const header = document.querySelectorAll("header a");
+
+    if (!input?.checkVisibility()) {
+      header.forEach((data) => {
+        data?.classList.add("hidden");
+      });
+      input?.classList.replace("hidden", "flex");
+      input.focus();
+    } else {
+      document.querySelectorAll("header a").forEach((data) => {
+        data?.classList.contains("hidden")
+          ? data?.classList.remove("hidden")
+          : "";
+      });
+      input?.classList.replace("flex", "hidden");
+    }
+    input.value = "";
+  };
   return (
-    <main className="px-9 py-5 basis-[100%]">
+    <main className="px-9 py-5 w-screen">
       <header className="flex items-center justify-between">
         <div className="nav-links flex items-center gap-5">
-          <button className="hidden menu-btn" id="menu-open">
+          <button
+            className="flex sm:hidden block menu-btn"
+            onClick={() => handelclick()}
+          >
             <i className="text-white cursor-pointer bx bx-menu"></i>
           </button>
           <a
@@ -27,12 +63,16 @@ const Maincontainer = () => {
           </a>
         </div>
 
-        <div className="flex items-center gap-1.5 w-[70%] bg-[#1d1d1d] border p-2.5 rounded-lg border-solid border-[#464748]">
-          <i className="text-white cursor-pointer bx bx-search"></i>
+        <div className="flex items-center gap-1.5 lg:w-[70%] bg-[#1d1d1d] border p-2.5 rounded-lg border-solid border-[#464748]">
+          <i
+            className="text-white cursor-pointer bx bx-search"
+            onClick={() => searchClick()}
+          ></i>
           <input
-            className="w-full bg-transparent text-white border-[none] outline-none"
+            className=" hidden sm:flex w-full bg-transparent text-white border-[none] outline-none"
             type="text"
             placeholder="Type here to search"
+            onBlur={() => searchClick()}
           />
         </div>
       </header>

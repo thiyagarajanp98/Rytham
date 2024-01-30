@@ -1,38 +1,26 @@
 const Sidebar = () => {
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    console.log(document.querySelector("h-screen"));
-    const menuOpen: HTMLElement | null = document.getElementById("menu-open");
-    const menuClose: HTMLElement | null = document.getElementById("menu-close");
-
-    const sidebar: Element | null = document.querySelector("aside");
-
-    console.log(sidebar);
-    menuOpen?.addEventListener("click", () => {
-      if (sidebar instanceof HTMLElement) {
-        sidebar.classList.remove("absolute");
-        sidebar.classList.replace("left-[-100%]", "left-[0]");
-        sidebar.parentNode
-          .querySelector("main")
-          .getElementsByClassName("menu-btn")
-          ["menu-open"].classList.add("hidden");
-      }
-    });
-
-    menuClose?.addEventListener("click", () => {
-      if (sidebar instanceof HTMLElement) {
-        sidebar.classList.add("absolute");
-        sidebar.classList.replace("left-[0]", "left-[-100%]");
-        sidebar.parentNode
-          .querySelector("main")
-          .getElementsByClassName("menu-btn")
-          ["menu-open"].classList.remove("hidden");
-      }
-    });
+  const handelclick = () => {
+    const sidebar = document.querySelector("div.side-bar");
+    if (sidebar?.classList.contains("sm:hidden")) {
+      sidebar?.classList.replace("flex", "hidden");
+      document
+        .querySelector("div header button.menu-btn")
+        ?.classList.replace("hidden", "flex");
+    } else {
+      sidebar?.classList.replace("sm:flex", "sm:hidden");
+      document
+        .querySelector("div header button.menu-btn")
+        ?.classList.replace("sm:hidden", "sm:flex");
+    }
   };
   return (
-    <aside className="h-screen bg-[#18181d] left-[0] basis-1/6 w-52 flex flex-col justify-between z-[10000] transition-all duration-[0.6s] ease-[ease] items-center py-3">
-      <div className="flex items-center gap-1.5">
-        <button className="menu-btn" id="menu-close" onClick={handleClick}>
+    <div className="side-bar text-white w-52 p-4 h-screen hidden sm:flex flex-col justify-between bg-[#18181d] z-index[10000]">
+      <div className="flex items-center gap-1.5 pb-4">
+        <button
+          className="menu-btn"
+          id="menu-close"
+          onClick={() => handelclick()}
+        >
           <i className="text-white cursor-pointer  text-base transition-all duration-[0.3s] ease-[ease] hover:text-[#5773ff] bx bx-log-out-circle"></i>
         </button>
         <i className="text-white cursor-pointer  text-base transition-all duration-[0.3s] ease-[ease] hover:text-[#5773ff] bx bx-pulse"></i>
@@ -178,7 +166,6 @@ const Sidebar = () => {
           </li>
         </ul>
       </div>
-
       <div className="playing">
         <div className="bg-[#32323d] flex items-center gap-2.5 text-white text-[13px] p-2.5 rounded-[6px_6px_0_0]">
           <img
@@ -196,7 +183,7 @@ const Sidebar = () => {
           <p className="text-[#919191]">Playing On Device</p>
         </div>
       </div>
-    </aside>
+    </div>
   );
 };
 export default Sidebar;
