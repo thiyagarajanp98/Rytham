@@ -3,14 +3,14 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const fetchUserData = createAsyncThunk(
   "user/fetchUserData",
   async () => {
-    const response = await fetch("https://gfnvfs-8080.csb.app");
+    const response = await fetch("https://x4hq7j-8080.csb.app");
     const jsonData = await response.json();
     return jsonData;
   },
 );
 // Define the user slice
 export const userSlice = createSlice({
-  name: "user",
+  name: "HomeData",
   initialState: { data: null, loading: false, error: null },
   reducers: {},
   extraReducers: (builder) => {
@@ -28,4 +28,5 @@ export const userSlice = createSlice({
       });
   },
 });
+export const selectAllHomeData = (state) => state.HomeData.data;
 export default userSlice.reducer;
