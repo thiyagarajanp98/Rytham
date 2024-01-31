@@ -16,7 +16,8 @@ const Maincontainer = () => {
   // const Status = useSelector(getHomeDataStatus);
   // const error = useSelector(getHomeDataError);
 
-  const { data, loading, error } = useSelector((state) => state.user);
+  const { loading, error } = useSelector((state) => state.HomeData);
+  const data = useSelector(selectAllHomeData);
   useEffect(() => {
     dispatch(fetchUserData());
   }, [dispatch]);
@@ -33,12 +34,10 @@ const Maincontainer = () => {
       <div className="p-white">
         <span>
           {data ? (
-            <span>
+            <span className="text-white">
               <p>User Data:</p>
-              {data.modules.map((result) => {
-                data[result].map((res) => {
-                  return <p>{res.title}</p>;
-                });
+              {Object.keys(data.modules).map((result) => {
+                return data.modules[result].title;
               })}
             </span>
           ) : (
