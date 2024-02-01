@@ -10,7 +10,7 @@ interface UserData {
 export const fetchUserData = createAsyncThunk(
   "user/fetchUserData",
   async () => {
-    const response = await fetch("https://kygdc3-8080.csb.app");
+    const response = await fetch("https://pt5r4d-8080.csb.app/");
     const jsonData = await response.json();
     return jsonData;
   },
