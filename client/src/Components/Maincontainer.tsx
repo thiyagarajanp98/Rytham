@@ -27,200 +27,137 @@ const Maincontainer = () => {
           {data ? (
             <>
               <span className="text-white">
-                <p>User Data:</p>
+                <p className="tracking-[1px] text-[15px] mt-2">User Data:</p>
                 {Object.keys(data.modules).map((result) => {
                   return data.modules[result].title;
                 })}
               </span>
-              <section className="carousel w-full overflow-x-scroll relative box-border pt-20 p-[30px]">
-                <h2 className="categories__title text-[rgb(77,55,102)] text-[28px] absolute pl-[30px]">
-                  My List
-                </h2>
-                <div className="carousel__container whitespace-nowrap inline-block mx-0 my-[70px] pb-2.5">
-                  <div className="carousel-item opacity-30 hover:opacity-100 hover:scale-150 w-[200px] h-[250px] bg-[#95bcd6] overflow-hidden inline-block cursor-pointer transition-[1000ms] duration-[all] origin-[center_left] relative mr-2.5 mt-[70px] rounded-[20px]">
-                    <img
-                      className="carousel-item__img w-[200px] h-[250px] object-cover"
-                      src="https://images.pexels.com/photos/708392/pexels-photo-708392.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                      alt="people"
-                    />
-                    <div className="carousel-item__details text-white mx-0 my-[5px] text-[10px] opacity-0 transition-[450ms] duration-[opacity] absolute p-2.5 inset-0 hover:opacity-100">
-                      <div className="controls pt-[180px]">
-                        <span
-                          className="text-[0.9rem] text-[#2ecc71] fas fa-play-circle"
-                          aria-hidden="true"
-                        ></span>
-                        <span
-                          className="fas fa-plus-circle"
-                          aria-hidden="true"
-                        ></span>
-                      </div>
-                      <h5 className="carousel-item__details--title text-white mx-0 my-[5px]">
-                        Descriptive Title
-                      </h5>
-                      <h6 className="carousel-item__details--subtitle text-white mx-0 my-[5px]">
-                        Date and Duration
-                      </h6>
-                    </div>
-                  </div>
-                  <div className="carousel-item opacity-30 hover:opacity-100 hover:scale-150 w-[200px] h-[250px] bg-[#95bcd6] overflow-hidden inline-block cursor-pointer transition-[1000ms] duration-[all] origin-[center_left] relative mr-2.5 mt-[70px] rounded-[20px]">
-                    <img
-                      className="carousel-item__img w-[200px] h-[250px] object-cover"
-                      src="https://images.pexels.com/photos/708392/pexels-photo-708392.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                      alt="people"
-                    />
-                    <div className="carousel-item__details text-white mx-0 my-[5px] text-[10px] opacity-0 transition-[450ms] duration-[opacity] absolute p-2.5 inset-0 hover:opacity-100">
-                      <div className="controls pt-[180px]">
-                        <span
-                          className="text-[0.9rem] text-[#2ecc71] fas fa-play-circle"
-                          aria-hidden="true"
-                        ></span>
-                        <span
-                          className="fas fa-plus-circle"
-                          aria-hidden="true"
-                        ></span>
-                      </div>
-                      <h5 className="carousel-item__details--title text-white mx-0 my-[5px]">
-                        Descriptive Title
-                      </h5>
-                      <h6 className="carousel-item__details--subtitle text-white mx-0 my-[5px]">
-                        Date and Duration
-                      </h6>
-                    </div>
-                  </div>
-                  <div className="carousel-item opacity-30 hover:opacity-100 hover:scale-150 w-[200px] h-[250px] bg-[#95bcd6] overflow-hidden inline-block cursor-pointer transition-[1000ms] duration-[all] origin-[center_left] relative mr-2.5 mt-[70px] rounded-[20px]">
-                    <img
-                      className="carousel-item__img w-[200px] h-[250px] object-cover"
-                      src="https://images.pexels.com/photos/708392/pexels-photo-708392.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                      alt="people"
-                    />
-                    <div className="carousel-item__details text-white mx-0 my-[5px] text-[10px] opacity-0 transition-[450ms] duration-[opacity] absolute p-2.5 inset-0 hover:opacity-100">
-                      <div className="controls pt-[180px]">
-                        <span
-                          className="text-[0.9rem] text-[#2ecc71] fas fa-play-circle"
-                          aria-hidden="true"
-                        ></span>
-                        <span
-                          className="fas fa-plus-circle"
-                          aria-hidden="true"
-                        ></span>
-                      </div>
-                      <h5 className="carousel-item__details--title text-white mx-0 my-[5px]">
-                        Descriptive Title
-                      </h5>
-                      <h6 className="carousel-item__details--subtitle text-white mx-0 my-[5px]">
-                        Date and Duration
-                      </h6>
-                    </div>
-                  </div>
-                  <div className="carousel-item opacity-30 hover:opacity-100 hover:scale-150 w-[200px] h-[250px] bg-[#95bcd6] overflow-hidden inline-block cursor-pointer transition-[1000ms] duration-[all] origin-[center_left] relative mr-2.5 mt-[70px] rounded-[20px]">
-                    <img
-                      className="carousel-item__img w-[200px] h-[250px] object-cover"
-                      src="https://images.pexels.com/photos/708392/pexels-photo-708392.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                      alt="people"
-                    />
-                    <div className="carousel-item__details text-white mx-0 my-[5px] text-[10px] opacity-0 transition-[450ms] duration-[opacity] absolute p-2.5 inset-0 hover:opacity-100">
-                      <div className="controls pt-[180px]">
-                        <span
-                          className="text-[0.9rem] text-[#2ecc71] fas fa-play-circle"
-                          aria-hidden="true"
-                        ></span>
-                        <span
-                          className="fas fa-plus-circle"
-                          aria-hidden="true"
-                        ></span>
-                      </div>
-                      <h5 className="carousel-item__details--title text-white mx-0 my-[5px]">
-                        Descriptive Title
-                      </h5>
-                      <h6 className="carousel-item__details--subtitle text-white mx-0 my-[5px]">
-                        Date and Duration
-                      </h6>
-                    </div>
-                  </div>
-                  <div className="carousel-item opacity-30 hover:opacity-100 hover:scale-150 w-[200px] h-[250px] bg-[#95bcd6] overflow-hidden inline-block cursor-pointer transition-[1000ms] duration-[all] origin-[center_left] relative mr-2.5 mt-[70px] rounded-[20px]">
-                    <img
-                      className="carousel-item__img w-[200px] h-[250px] object-cover"
-                      src="https://images.pexels.com/photos/708392/pexels-photo-708392.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                      alt="people"
-                    />
-                    <div className="carousel-item__details text-white mx-0 my-[5px] text-[10px] opacity-0 transition-[450ms] duration-[opacity] absolute p-2.5 inset-0 hover:opacity-100">
-                      <div className="controls pt-[180px]">
-                        <span
-                          className="text-[0.9rem] text-[#2ecc71] fas fa-play-circle"
-                          aria-hidden="true"
-                        ></span>
-                        <span
-                          className="fas fa-plus-circle"
-                          aria-hidden="true"
-                        ></span>
-                      </div>
-                      <h5 className="carousel-item__details--title text-white mx-0 my-[5px]">
-                        Descriptive Title
-                      </h5>
-                      <h6 className="carousel-item__details--subtitle text-white mx-0 my-[5px]">
-                        Date and Duration
-                      </h6>
-                    </div>
-                  </div>
-                  <div className="carousel-item opacity-30 hover:opacity-100 hover:scale-150 w-[200px] h-[250px] bg-[#95bcd6] overflow-hidden inline-block cursor-pointer transition-[1000ms] duration-[all] origin-[center_left] relative mr-2.5 mt-[70px] rounded-[20px]">
-                    <img
-                      className="carousel-item__img w-[200px] h-[250px] object-cover"
-                      src="https://images.pexels.com/photos/708392/pexels-photo-708392.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                      alt="people"
-                    />
-                    <div className="carousel-item__details text-white mx-0 my-[5px] text-[10px] opacity-0 transition-[450ms] duration-[opacity] absolute p-2.5 inset-0 hover:opacity-100">
-                      <div className="controls pt-[180px]">
-                        <span
-                          className="text-[0.9rem] text-[#2ecc71] fas fa-play-circle"
-                          aria-hidden="true"
-                        ></span>
-                        <span
-                          className="fas fa-plus-circle"
-                          aria-hidden="true"
-                        ></span>
-                      </div>
-                      <h5 className="carousel-item__details--title text-white mx-0 my-[5px]">
-                        Descriptive Title
-                      </h5>
-                      <h6 className="carousel-item__details--subtitle text-white mx-0 my-[5px]">
-                        Date and Duration
-                      </h6>
-                    </div>
-                  </div>
-                  <div className="carousel-item opacity-30 hover:opacity-100 hover:scale-150 w-[200px] h-[250px] bg-[#95bcd6] overflow-hidden inline-block cursor-pointer transition-[1000ms] duration-[all] origin-[center_left] relative mr-2.5 mt-[70px] rounded-[20px]">
-                    <img
-                      className="carousel-item__img w-[200px] h-[250px] object-cover"
-                      src="https://images.pexels.com/photos/708392/pexels-photo-708392.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                      alt="people"
-                    />
-                    <div className="carousel-item__details text-white mx-0 my-[5px] text-[10px] opacity-0 transition-[450ms] duration-[opacity] absolute p-2.5 inset-0 hover:opacity-100">
-                      <div className="controls pt-[180px]">
-                        <span
-                          className="text-[0.9rem] text-[#2ecc71] fas fa-play-circle"
-                          aria-hidden="true"
-                        ></span>
-                        <span
-                          className="fas fa-plus-circle"
-                          aria-hidden="true"
-                        ></span>
-                      </div>
-                      <h5 className="carousel-item__details--title text-white mx-0 my-[5px]">
-                        Descriptive Title
-                      </h5>
-                      <h6 className="carousel-item__details--subtitle text-white mx-0 my-[5px]">
-                        Date and Duration
-                      </h6>
-                    </div>
+
+              <div className="wrapper flex  gap-x-4 p-2 overflow-x-scroll w-[90%] justify-around">
+                <div className="group w-[150px] h-[150px] relative flex items-end transition-[0.4s] duration-[ease-out] shadow-[0px_7px_10px_rgba(0,0,0,0.5)] rounded-[15px] hover:translate-y-5">
+                  <img
+                    className="group-hover:opacity-30 w-full h-full object-cover absolute rounded-[15px] left-0 top-0"
+                    src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
+                  />
+                  <div className="info relative z-[3] text-[white] opacity-0 translate-y-[10px] transition-[0.5s] group-hover:opacity-100 card-hover:translate-y-0 ">
+                    <h1 className="m-0 text-2xl">Mountain</h1>
+                    <p className="tracking-[1px] text-[15px] mt-2">
+                      Lorem Ipsum is simply dummy text from the printing and
+                      typeseting industry
+                    </p>
                   </div>
                 </div>
-              </section>
+                <div className="group w-[150px] h-[150px] relative flex items-end transition-[0.4s] duration-[ease-out] shadow-[0px_7px_10px_rgba(0,0,0,0.5)] rounded-[15px] hover:translate-y-5">
+                  <img
+                    className="group-hover:opacity-30 w-full h-full object-cover absolute rounded-[15px] left-0 top-0"
+                    src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
+                  />
+                  <div className="info relative z-[3] text-[white] opacity-0 translate-y-[10px] transition-[0.5s] group-hover:opacity-100 card-hover:translate-y-0 ">
+                    <h1 className="m-0 text-2xl">Mountain</h1>
+                    <p className="tracking-[1px] text-[15px] mt-2">
+                      Lorem Ipsum is simply dummy text from the printing and
+                      typeseting industry
+                    </p>
+                  </div>
+                </div>
+                <div className="group w-[150px] h-[150px] relative flex items-end transition-[0.4s] duration-[ease-out] shadow-[0px_7px_10px_rgba(0,0,0,0.5)] rounded-[15px] hover:translate-y-5">
+                  <img
+                    className="group-hover:opacity-30 w-full h-full object-cover absolute rounded-[15px] left-0 top-0"
+                    src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
+                  />
+                  <div className="info relative z-[3] text-[white] opacity-0 translate-y-[10px] transition-[0.5s] group-hover:opacity-100 card-hover:translate-y-0 ">
+                    <h1 className="m-0 text-2xl">Mountain</h1>
+                    <p className="tracking-[1px] text-[15px] mt-2">
+                      Lorem Ipsum is simply dummy text from the printing and
+                      typeseting industry
+                    </p>
+                  </div>
+                </div>
+                <div className="group w-[150px] h-[150px] relative flex items-end transition-[0.4s] duration-[ease-out] shadow-[0px_7px_10px_rgba(0,0,0,0.5)] rounded-[15px] hover:translate-y-5">
+                  <img
+                    className="group-hover:opacity-30 w-full h-full object-cover absolute rounded-[15px] left-0 top-0"
+                    src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
+                  />
+                  <div className="info relative z-[3] text-[white] opacity-0 translate-y-[10px] transition-[0.5s] group-hover:opacity-100 card-hover:translate-y-0 ">
+                    <h1 className="m-0 text-2xl">Mountain</h1>
+                    <p className="tracking-[1px] text-[15px] mt-2">
+                      Lorem Ipsum is simply dummy text from the printing and
+                      typeseting industry
+                    </p>
+                  </div>
+                </div>
+                <div className="group w-[150px] h-[150px] relative flex items-end transition-[0.4s] duration-[ease-out] shadow-[0px_7px_10px_rgba(0,0,0,0.5)] rounded-[15px] hover:translate-y-5">
+                  <img
+                    className="group-hover:opacity-30 w-full h-full object-cover absolute rounded-[15px] left-0 top-0"
+                    src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
+                  />
+                  <div className="info relative z-[3] text-[white] opacity-0 translate-y-[10px] transition-[0.5s] group-hover:opacity-100 card-hover:translate-y-0 ">
+                    <h1 className="m-0 text-2xl">Mountain</h1>
+                    <p className="tracking-[1px] text-[15px] mt-2">
+                      Lorem Ipsum is simply dummy text from the printing and
+                      typeseting industry
+                    </p>
+                  </div>
+                </div>
+                <div className="group w-[150px] h-[150px] relative flex items-end transition-[0.4s] duration-[ease-out] shadow-[0px_7px_10px_rgba(0,0,0,0.5)] rounded-[15px] hover:translate-y-5">
+                  <img
+                    className="group-hover:opacity-30 w-full h-full object-cover absolute rounded-[15px] left-0 top-0"
+                    src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
+                  />
+                  <div className="info relative z-[3] text-[white] opacity-0 translate-y-[10px] transition-[0.5s] group-hover:opacity-100 card-hover:translate-y-0 ">
+                    <h1 className="m-0 text-2xl">Mountain</h1>
+                    <p className="tracking-[1px] text-[15px] mt-2">
+                      Lorem Ipsum is simply dummy text from the printing and
+                      typeseting industry
+                    </p>
+                  </div>
+                </div>
+                <div className="group w-[150px] h-[150px] relative flex items-end transition-[0.4s] duration-[ease-out] shadow-[0px_7px_10px_rgba(0,0,0,0.5)] rounded-[15px] hover:translate-y-5">
+                  <img
+                    className="group-hover:opacity-30 w-full h-full object-cover absolute rounded-[15px] left-0 top-0"
+                    src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
+                  />
+                  <div className="info relative z-[3] text-[white] opacity-0 translate-y-[10px] transition-[0.5s] group-hover:opacity-100 card-hover:translate-y-0 ">
+                    <h1 className="m-0 text-2xl">Mountain</h1>
+                    <p className="tracking-[1px] text-[15px] mt-2">
+                      Lorem Ipsum is simply dummy text from the printing and
+                      typeseting industry
+                    </p>
+                  </div>
+                </div>
+                <div className="group w-[150px] h-[150px] relative flex items-end transition-[0.4s] duration-[ease-out] shadow-[0px_7px_10px_rgba(0,0,0,0.5)] rounded-[15px] hover:translate-y-5">
+                  <img
+                    className="group-hover:opacity-30 w-full h-full object-cover absolute rounded-[15px] left-0 top-0"
+                    src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
+                  />
+                  <div className="info relative z-[3] text-[white] opacity-0 translate-y-[10px] transition-[0.5s] group-hover:opacity-100 card-hover:translate-y-0 ">
+                    <h1 className="m-0 text-2xl">Mountain</h1>
+                    <p className="tracking-[1px] text-[15px] mt-2">
+                      Lorem Ipsum is simply dummy text from the printing and
+                      typeseting industry
+                    </p>
+                  </div>
+                </div>
+                <div className="group w-[150px] h-[150px] relative flex items-end transition-[0.4s] duration-[ease-out] shadow-[0px_7px_10px_rgba(0,0,0,0.5)] rounded-[15px] hover:translate-y-5">
+                  <img
+                    className="group-hover:opacity-30 w-full h-full object-cover absolute rounded-[15px] left-0 top-0"
+                    src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
+                  />
+                  <div className="info relative z-[3] text-[white] opacity-0 translate-y-[10px] transition-[0.5s] group-hover:opacity-100 card-hover:translate-y-0 ">
+                    <h1 className="m-0 text-2xl">Mountain</h1>
+                    <p className="tracking-[1px] text-[15px] mt-2">
+                      Lorem Ipsum is simply dummy text from the printing and
+                      typeseting industry
+                    </p>
+                  </div>
+                </div>
+              </div>
             </>
           ) : (
             <span>No user data found.</span>
           )}
         </span>
       </div>
-      <Player />
     </main>
   );
 };

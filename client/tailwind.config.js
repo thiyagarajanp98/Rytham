@@ -8,4 +8,5 @@ export default {
     extend: {},
   },
   plugins: [require("tailwind-scrollbar-hide")],
+  plugins: [require("tailwindcss-3d")],
 };
