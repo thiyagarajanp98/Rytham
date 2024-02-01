@@ -3,7 +3,8 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import store from "../src/app/store.tsx";
 import { Provider } from "react-redux";
-
+import { fetchUserData } from "./features/homeData.tsx";
+store.dispatch(fetchUserData());
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Provider store={store}>
